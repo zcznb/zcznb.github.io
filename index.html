@@ -12,7 +12,7 @@
 <meta property="og:title" content="zcz的博客">
 <meta property="og:url" content="http://yoursite.com/index.html">
 <meta property="og:site_name" content="zcz的博客">
-<meta property="og:locale" content="zh">
+<meta property="og:locale" content="zh_CN">
 <meta property="article:author" content="zcz">
 <meta property="article:tag" content="React Native">
 <meta property="article:tag" content="Vue">
@@ -164,28 +164,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-test" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-APP瘦身攻略" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/06/30/test/">test</a>
+      <a class="article-title" href="/2020/06/30/APP%E7%98%A6%E8%BA%AB%E6%94%BB%E7%95%A5/">APP瘦身攻略</a>
     </h1>
   
 
         
-        <a href="/2020/06/30/test/" class="archive-article-date">
-  	<time datetime="2020-06-30T02:46:11.999Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-30</time>
+        <a href="/2020/06/30/APP%E7%98%A6%E8%BA%AB%E6%94%BB%E7%95%A5/" class="archive-article-date">
+  	<time datetime="2020-06-30T03:08:06.196Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-30</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>#flutter andriod studio 快捷键</p>
-<p>###1.StatelessWidget和StatefulWidget<br> 输入stless和stful即可创建<br>###2.代码操作<br>CTRL + -/+  折起/展开代码块<br>CTRL + .   折起/展开选中代码<br>CTRL + [   光标回到上一次编辑的位置<br>CTRL + ]   光标回到下一次编辑的位置<br>CTRL + L   定位某一行，甚至某一个字符<br>CTRL + [   光标回到上一次编辑的位置<br>CTRL + ]   光标回到下一次编辑的位置<br>CTRL + L   定位某一行，甚至某一个字符<br>3.查看小部件源码<br>CTRL + Click(鼠标左键)<br>CTRL + B<br>CTRL + Down（小键盘↓）<br>F4（非Touch Bar键盘）<br>4.拓展功能（快速添加删除widget层级，快速导包等）<br>alt+Enter</p>
+        <p>第一步：检测并删除无用资源<br>Analyze -&gt; Run Inspection By Name -&gt;UnUsedResource </p>
+<p>第二步：资源打包配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">buildTypes &#123;</span><br><span class="line">       debug &#123;</span><br><span class="line">           shrinkResources true &#x2F;&#x2F;开启无用资源或代码移除</span><br><span class="line">           ………………………………………………</span><br><span class="line">       &#125;</span><br><span class="line">       release &#123;</span><br><span class="line">           shrinkResources true</span><br><span class="line">           ………………………………………………</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+<p>第三步：启用资源缩减<br>   <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">resConfigs &#39;en&#39;  &#x2F;&#x2F;&#39;en&#39; 只保留英文资源 ,&quot;zh&quot;只保留中文资源</span><br></pre></td></tr></table></figure><br>第四步：开启Proguard 并 配置 混淆文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">buildTypes &#123;</span><br><span class="line">       debug &#123;</span><br><span class="line">           shrinkResources true</span><br><span class="line">           minifyEnabled true &#x2F;&#x2F;在debug模式下是否开启资源混淆</span><br><span class="line">           proguardFiles getDefaultProguardFile(&#39;proguard-android.txt&#39;), &#39;proguard-rules.pro&#39;</span><br><span class="line">       &#125;</span><br><span class="line">       release &#123;</span><br><span class="line">           shrinkResources true </span><br><span class="line">           minifyEnabled true  &#x2F;&#x2F;在正式签名版本是否混淆</span><br><span class="line">           proguardFiles getDefaultProguardFile(&#39;proguard-android.txt&#39;), &#39;proguard-rules.pro&#39;</span><br><span class="line">       &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
+<p>第五步：启用Biu 插件<br>将资源目录下的png格式图片全部压缩一遍</p>
+<p>zip压缩</p>
 
       
 
@@ -198,7 +204,85 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/06/30/test/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/06/30/APP%E7%98%A6%E8%BA%AB%E6%94%BB%E7%95%A5/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Flutter快捷键（Android Studio windows版） - 副本" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/06/30/Flutter%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%88Android%20Studio%20windows%E7%89%88%EF%BC%89%20-%20%E5%89%AF%E6%9C%AC/">Flutter快捷键（Android Studio windows版） - 副本</a>
+    </h1>
+  
+
+        
+        <a href="/2020/06/30/Flutter%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%88Android%20Studio%20windows%E7%89%88%EF%BC%89%20-%20%E5%89%AF%E6%9C%AC/" class="archive-article-date">
+  	<time datetime="2020-06-30T03:06:50.039Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h5 id="Statelesswidget和Statefulwidget"><a href="#Statelesswidget和Statefulwidget" class="headerlink" title="Statelesswidget和Statefulwidget"></a>Statelesswidget和Statefulwidget</h5><ul>
+<li>输入stless和stful即可创建<h5 id="代码操作"><a href="#代码操作" class="headerlink" title="代码操作"></a>代码操作</h5></li>
+<li>CTRL + -/+  折起/展开代码块</li>
+<li>CTRL + .   折起/展开选中代码</li>
+<li>CTRL + [   光标回到上一次编辑的位置</li>
+<li>CTRL + ]   光标回到下一次编辑的位置</li>
+<li>CTRL + L   定位某一行，甚至某一个字符</li>
+<li>CTRL + [   光标回到上一次编辑的位置</li>
+<li>CTRL + ]   光标回到下一次编辑的位置</li>
+<li>CTRL + L   定位某一行，甚至某一个字符<h5 id="查看小部件源码"><a href="#查看小部件源码" class="headerlink" title="查看小部件源码"></a>查看小部件源码</h5></li>
+<li>CTRL + Click(鼠标左键)</li>
+<li>CTRL + B</li>
+<li>CTRL + Down（小键盘↓）</li>
+<li>F4（非Touch Bar键盘）<h5 id="拓展功能（快速添加删除widget层级，快速导包等）"><a href="#拓展功能（快速添加删除widget层级，快速导包等）" class="headerlink" title="拓展功能（快速添加删除widget层级，快速导包等）"></a>拓展功能（快速添加删除widget层级，快速导包等）</h5></li>
+<li>alt+Enter</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/06/30/Flutter%E5%BF%AB%E6%8D%B7%E9%94%AE%EF%BC%88Android%20Studio%20windows%E7%89%88%EF%BC%89%20-%20%E5%89%AF%E6%9C%AC/">展开全文 >></a>
         </p>
       
 
